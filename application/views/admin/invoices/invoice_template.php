@@ -791,12 +791,17 @@
                                         class="bold tw-text-neutral-700"><?php echo _l('invoice_adjustment'); ?></span>
                                 </div>
                                 <div class="col-md-5">
-                                    <input type="number" data-toggle="tooltip"
-                                        data-title="<?php echo _l('numbers_not_formatted_while_editing'); ?>" value="<?php if (isset($invoice)) {
-                                            echo $invoice->adjustment;
-                                        } else {
-                                            echo 0;
-                                        } ?>" class="form-control pull-left" name="adjustment">
+                                    <div class="input-group" id="discount-total">
+                                        <input type="number" data-toggle="tooltip"
+                                            data-title="<?php echo _l('numbers_not_formatted_while_editing'); ?>" value="<?php if (isset($invoice)) {
+                                                echo $invoice->adjustment;
+                                            } else {
+                                                echo 0;
+                                            } ?>" class="form-control pull-left" name="adjustment">
+                                        <div class="input-group-addon">
+                                            <span class="discount-total-type-selected">%</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </td>

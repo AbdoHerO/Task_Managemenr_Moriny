@@ -241,12 +241,17 @@
                                 <span class="bold tw-text-neutral-700"><?php echo _l('estimate_adjustment'); ?></span>
                             </div>
                             <div class="col-md-5">
-                                <input type="number" data-toggle="tooltip"
-                                    data-title="<?php echo _l('numbers_not_formatted_while_editing'); ?>" value="<?php if (isset($estimate)) {
-                                        echo $estimate->adjustment;
-                                    } else {
-                                        echo 0;
-                                    } ?>" class="form-control pull-left" name="adjustment">
+                                <div class="input-group" > <!-- id="adjustment" -->
+                                    <input type="number" data-toggle="tooltip"
+                                        data-title="<?php echo _l('numbers_not_formatted_while_editing'); ?>" value="<?php if (isset($estimate)) {
+                                            echo $estimate->adjustment;
+                                        } else {
+                                            echo 0;
+                                        } ?>" class="form-control pull-left" name="adjustment">
+                                    <div class="input-group-addon">
+                                        <span class="discount-total-type-selected">%</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </td>
